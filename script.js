@@ -1,22 +1,22 @@
-// Get display input
+
 const display = document.getElementById('display');
 
-// Add input to display
+
 function append(value) {
   display.value += value;
 }
 
-// Clear all input
+
 function clearDisplay() {
   display.value = '';
 }
 
-// Delete last character
+
 function deleteLast() {
   display.value = display.value.slice(0, -1);
 }
 
-// Calculate final result
+
 function calculate() {
   try {
     const expression = display.value.replace(/%/g, '/100');
@@ -26,7 +26,7 @@ function calculate() {
   }
 }
 
-// Square root
+
 function squareRoot() {
   try {
     display.value = Math.sqrt(eval(display.value));
@@ -35,7 +35,7 @@ function squareRoot() {
   }
 }
 
-// Square current value
+
 function square() {
   try {
     display.value = Math.pow(eval(display.value), 2);
@@ -44,7 +44,7 @@ function square() {
   }
 }
 
-// Cube current value
+
 function cube() {
   try {
     display.value = Math.pow(eval(display.value), 3);
@@ -53,17 +53,17 @@ function cube() {
   }
 }
 
-// x power y
+
 function power() {
   append('**');
 }
 
-// Toggle light/dark theme
+
 function toggleTheme() {
   document.body.classList.toggle('light');
 }
 
-// Support keyboard keys
+
 document.addEventListener('keydown', (e) => {
   const key = e.key;
   if (/[0-9+\-*/.%()]/.test(key)) {
@@ -75,4 +75,5 @@ document.addEventListener('keydown', (e) => {
   } else if (key === 'Escape') {
     clearDisplay();
   }
+
 });
