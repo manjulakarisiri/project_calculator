@@ -3,23 +3,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Scientific Calculator</title>
+  <title> Calculator</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="calculator">
-    <!-- Display -->
+   
     <input type="text" id="display" disabled />
 
-    <!-- Buttons grid -->
+
     <div class="buttons">
-      <!-- Top row -->
+    
       <button class="btn" onclick="clearDisplay()">C</button>
       <button class="btn" onclick="deleteLast()">DEL</button>
       <button class="btn" onclick="append('%')">%</button>
       <button class="btn" onclick="append('/')">/</button>
 
-      <!-- Scientific functions -->
       <button class="btn" onclick="append('Math.sin(')">sin</button>
       <button class="btn" onclick="append('Math.cos(')">cos</button>
       <button class="btn" onclick="append('Math.tan(')">tan</button>
@@ -30,7 +29,7 @@
       <button class="btn" onclick="square()">x²</button>
       <button class="btn" onclick="cube()">x³</button>
 
-      <!-- Numbers and operators -->
+     
       <button class="btn" onclick="append('7')">7</button>
       <button class="btn" onclick="append('8')">8</button>
       <button class="btn" onclick="append('9')">9</button>
@@ -51,19 +50,20 @@
       <button class="btn" onclick="power()">xʸ</button>
       <button class="btn equal" onclick="calculate()">=</button>
 
-      <!-- Extra: π and brackets -->
+     
       <button class="btn" onclick="append('Math.PI')">π</button>
       <button class="btn" onclick="append('(')">(</button>
       <button class="btn" onclick="append(')')">)</button>
     </div>
 
-    <!-- Theme toggle -->
-    <button class="theme-toggle" onclick="toggleTheme()">🌙 Toggle Theme</button>
+   
+    <button class="theme-toggle" onclick="toggleTheme()"> Toggle Theme</button>
 
-    <!-- Credit -->
+   
     <p class="credit">Design by Manjula Karisiri</p>
   </div>
 
   <script src="script.js"></script>
 </body>
+
 </html>
